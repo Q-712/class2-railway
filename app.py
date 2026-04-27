@@ -1,10 +1,14 @@
 # -*- coding: utf-8 -*-
 import os
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from openai import OpenAI
+
+# 加载环境变量
+load_dotenv()
 
 # 配置阿里云百炼
 QWEN_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
